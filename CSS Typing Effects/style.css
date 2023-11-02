@@ -1,0 +1,31 @@
+/* Styles for the main container */
+.wrapper {
+    height: 100vh; /* Sets the container's height to 100% of the viewport height */
+    display: grid; /* Uses a grid system */
+    place-items: center; /* Centers the content both vertically and horizontally within the container */
+}
+
+/* Styles for a typing effect */
+.typing-effect {
+    width: 25ch; /* Sets the width of the text box to 25 characters */
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate; /* Applies two animations: typing and blinking */
+    white-space: nowrap; /* Prevents text from wrapping onto multiple lines */
+    overflow: hidden; /* Hides content that overflows the width */
+    border-right: 3px solid; /* Adds a 3-pixel right border */
+    font-family: monospace; /* Uses a monospaced font (like a code font) */
+    font-size: 2em; /* Sets the font size to 2 times the base size */
+}
+
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0; /* Starts the animation with a width of 0 (no visible text) */
+    }
+}
+
+/* Blinking animation */
+@keyframes blink {
+    50% {
+        border-color: transparent; /* Changes the border color to transparent at the halfway point of the animation */
+    }
+}
